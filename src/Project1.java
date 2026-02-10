@@ -14,10 +14,25 @@ public class Project1 {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter an integer, the input ends if it is 0: ");
         // loop: read integers until the user enters 0
-        // if number > 0, increment positive counter
-        // if number < 0, increment negative counter
-        // add number to total
-        // increment count
+        int number = input.nextInt();
+
+        while (number != 0) {
+            // classify number
+           if(number >0) {
+               // update totals and count
+               // if number > 0, increment positive counter
+               pos++;
+           }
+           // if number < 0, increment negative counter
+           else {
+               neg++;
+           }
+            // add number to total
+           total += number;
+            // increment count
+           numberOfNumbers++;
+            number = input.nextInt();
+        }
 
         // if count is 0
         // display "No numbers are entered except 0"
