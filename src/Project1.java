@@ -35,9 +35,21 @@ public class Project1 {
         }
 
         // if count is 0
-        // display "No numbers are entered except 0"
-        // else
-        // compute average as a floating-point value
-        // display positives, negatives, total, and average
+        if(numberOfNumbers==0) {
+            // display "No numbers are entered except 0"
+            System.out.println("No numbers are entered except 0");
+        }
+        else {
+            // else
+            // compute average as a floating-point value
+            double average = (double) total / numberOfNumbers;
+            // display positives, negatives, total, and average
+            System.out.println("The number of positives is "+ pos);
+            System.out.println("The number of negatives is "+ neg);
+            System.out.println("The total is "+ (double) total);
+            System.out.println("The average is "+ average);
+        }
+
+
     }
 }
