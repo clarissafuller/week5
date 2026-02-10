@@ -4,15 +4,22 @@ public class Project5 {
     public static void main(String[] args) {
 
         // create Scanner for user input
+        Scanner input = new Scanner(System.in);
 
-        // prompt the user to enter the first 12 digits of an ISBN number as a string
+        // prompt the user to enter the first 12 digits of an ISBN number
+        System.out.print("Enter the first 12 digits of an ISBN number as a string: ");
 
         // read the input as a String
+        String isbn = input.nextLine();
 
         // check if the input length is exactly 12
-        // if not, display "invalid input" and exit the program
+        if (isbn.length() != 12) {
+            System.out.println(isbn + " is an invalid input");
+            return;
+        }
 
-        // initialize sum variable to 0
+        // initialize sum variable for checksum calculation
+        int sum = 0;
 
         // loop through each character in the string (index 0 to 11)
         // convert the current character to an integer digit
